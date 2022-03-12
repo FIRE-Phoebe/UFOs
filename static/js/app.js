@@ -5,10 +5,11 @@ var tbody = d3.select('tbody');
 // build a table, clean data, insert data, use forEach to loop through data
 function buildTable(data) {
     //clear out any existing data
-    tbody.html('');
+    tbody.html("");
     //loop each obj in the data and append to table row
     data.forEach((dataRow) => {
         let row = tbody.append("tr");
+
     //loop through each field in the data Row and add each value as a tbale cell (td)
     Object.values(dataRow).forEach((val) => {
         let cell = row.append("td");
@@ -29,7 +30,7 @@ function handleClick() {
       // Apply `filter` to the table data to only keep the
       // rows where the `datetime` value matches the filter value
       filteredData = filteredData.filter(row => row.datetime === date);
-    }
+    };
   
      // Rebuild the table using the filtered data
     // @NOTE: If no date was entered, then filteredData will
